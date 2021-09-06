@@ -24,7 +24,7 @@ namespace TesterProgram
                 ID = "Student",
                 GPA = 1.2f
             };
-            
+
             Student s2 = new Student("Robert", "Pickenpaugh", "Student", 1.2f);
 
             Console.WriteLine(s1);
@@ -57,11 +57,29 @@ namespace TesterProgram
                 Password = "secret"
             };
 
-            Login l2 = new Login ( "RobertP", "secret" );
+            Login l2 = new Login("RobertP", "secret");
 
             Console.WriteLine(l1);
             Console.WriteLine(l2);
             #endregion
+            Console.WriteLine("-----ContactInfo-----");
+            #region ContactInfo
+
+            ContactInfo ci1 = new ContactInfo
+            {
+                StreetAddress = "1212 House Road",
+                City = "Kansas City",
+                State = "MO",
+                Zip = "64030",
+                Phone = "123-345-6789",
+                Email = "professionalemail@yahoo.com",
+            };
+            ContactInfo ci2 = new ContactInfo("1212 House Road", "Kansas City", "MO", "64030", "123-345-6789", "professionalemail@yahoo.com");
+
+            Console.WriteLine(ci1);
+            Console.WriteLine(ci2);
+            #endregion
+
         }//end Main()
     }
 }
