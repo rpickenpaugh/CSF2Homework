@@ -49,6 +49,19 @@ namespace TesterProgram
 
             #endregion
             Console.WriteLine("-----Login-----");
+            #region Login
+
+            Login l1 = new Login
+            {
+                Username = "RobertP",
+                Password = "secret"
+            };
+
+            Login l2 = new Login ( "RobertP", "secret" );
+
+            Console.WriteLine(l1);
+            Console.WriteLine(l2);
+            #endregion
         }//end Main()
     }
 }
