@@ -13,6 +13,9 @@ namespace TesterProgram
         {
             Console.Title = "-= Tester Program -=";
             Console.WriteLine("Tester Program");
+            #region Student
+
+            Console.WriteLine("-----Student-----");
 
             Student s1 = new Student
             {
@@ -21,14 +24,31 @@ namespace TesterProgram
                 ID = "Student",
                 GPA = 1.2f
             };
-
-            Console.WriteLine(s1);
-
+            
             Student s2 = new Student("Robert", "Pickenpaugh", "Student", 1.2f);
 
+            Console.WriteLine(s1);
             Console.WriteLine(s2);
-            Console.WriteLine("-----");
-            
-        }
+
+            #endregion
+            Console.WriteLine("-----Vehicle-----");
+            #region Vehicle
+
+            Vehicle v1 = new Vehicle
+            {
+                Make = "Mazda",
+                Model = "Mazda 3",
+                Year = 2015,
+                Weight = 2000f
+            };
+
+            Vehicle v2 = new Vehicle("Mazda", "Mazda 3", 2015, 2000f);
+
+            Console.WriteLine(v1);
+            Console.WriteLine(v2);
+
+            #endregion
+            Console.WriteLine("-----Login-----");
+        }//end Main()
     }
 }
