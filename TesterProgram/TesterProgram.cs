@@ -79,7 +79,9 @@ namespace TesterProgram
             Console.WriteLine(ci1);
             Console.WriteLine(ci2);
             #endregion
+
             Console.WriteLine("-----Customer-----");
+
             #region Customer
 
             Customer c1 = new Customer
@@ -110,6 +112,24 @@ namespace TesterProgram
             CreditCardAccount cca2 = new CreditCardAccount(1299565, c1, 500.12m, true, 5m);
             Console.WriteLine(cca1);
             Console.WriteLine(cca2);
+            #endregion
+
+            Console.WriteLine("-----Book-----");
+
+            #region Book
+
+            Book b1 = new Book
+            {
+                Title = "The Way of Kings",
+                Author = "Brandon Sanderson",
+                NumberOfPages = 1007
+            };
+
+            Book b2 = new Book("The Way of Kings", "Brandon Sanderson", 1007);
+
+            Console.WriteLine(b1);
+            Console.WriteLine(b2);
+
             #endregion
         }//end Main()
     }
