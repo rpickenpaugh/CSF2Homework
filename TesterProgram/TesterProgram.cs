@@ -79,9 +79,7 @@ namespace TesterProgram
             Console.WriteLine(ci1);
             Console.WriteLine(ci2);
             #endregion
-
             Console.WriteLine("-----Customer-----");
-
             #region Customer
 
             Customer c1 = new Customer
@@ -96,9 +94,7 @@ namespace TesterProgram
             Console.WriteLine(c2);
 
             #endregion
-
             Console.WriteLine("-----CreditCardAccount");
-
             #region CreditCardAccount
 
             CreditCardAccount cca1 = new CreditCardAccount
@@ -113,9 +109,7 @@ namespace TesterProgram
             Console.WriteLine(cca1);
             Console.WriteLine(cca2);
             #endregion
-
             Console.WriteLine("-----Book-----");
-
             #region Book
 
             Book b1 = new Book
@@ -131,6 +125,57 @@ namespace TesterProgram
             Console.WriteLine(b2);
 
             #endregion
+            Console.WriteLine("-----Library-----");
+            #region Library
+
+            //List<string> bookList = new List<string>()
+            //foreach (Book bk in Book)
+            //{
+
+            //};
+            List<Book> bookList = new List<Book>()
+            {
+                b1, b2
+            };
+
+            Library lib1 = new Library
+            {
+                LibraryName = "House of Books",
+                StreetAddress = "123 Book Dr",
+                City = "Kansas City",
+                State = "MO",
+                Zip = "64030",
+                Books = bookList
+            };
+
+            Library lib2 = new Library("House of Books", "123 Book Dr", "Kansas City", "MO", "64030", bookList);
+
+
+            //Library lib2 = new Library("House of Books", "123 Book Dr", "Kansas City", "MO", "64030", { "A", "B", "C"});
+
+            Console.WriteLine(lib1);
+            Console.WriteLine();
+            Console.WriteLine(lib2);
+            #endregion
+
+            Console.WriteLine("-----Song-----");
+
+            #region Song
+
+            Song song1 = new Song()
+            {
+                Artist = "Singer1",
+                Title = "Song1",
+                LengthInSeconds = 250
+            };
+
+            Song song2 = new Song("Singer2", "Song2", 300);
+
+            Console.WriteLine(song1);
+            Console.WriteLine(song2);
+
+            #endregion
+
         }//end Main()
     }
 }
