@@ -131,6 +131,50 @@ namespace TesterProgram
             Console.WriteLine(b2);
 
             #endregion
+            //Library
+            //TODO
+
+            //Song
+            //TODO
+
+            //Artist
+            //TODO
+
+            Console.WriteLine("-----MotorHome-----");
+
+            #region MotorHome
+
+            MotorHome mh1 = new MotorHome("Mazda", "Mazda 3-bed", 2017, 2000f, 3);
+           
+            MotorHome mh2 = new MotorHome
+            {
+                Make = "Mazda",
+                Model = "Mazda 3-bed",
+                Year = 2017,
+                Weight = 2000f,
+                NumberOfBeds = 3
+            };
+
+            Console.WriteLine(mh1);
+            Console.WriteLine(mh2);
+            #endregion
+
+            Console.WriteLine("-----Truck-----");
+
+            #region Truck
+
+            Truck tr1 = new Truck("Mazda", "Mazda 3 - Truck", 2018, 3000f, 10000f);
+            Truck tr2 = new Truck
+            {
+                Make = "Mazda",
+                Model = "Mazda 3 - Truck",
+                Year = 2018,
+                Weight= 3000f,
+                LoadCapacityLbs = 10000f
+            };
+            Console.WriteLine(tr1);
+            Console.WriteLine(tr2);
+            #endregion
         }//end Main()
     }
 }

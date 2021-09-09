@@ -9,40 +9,19 @@ namespace ClassesLibrary
     public class Vehicle
     {
         //fields
-
-        private string _make;
-        private string _model;
-        private int _year;
-        private float _weight;
-
+        
         //properties
 
-        public string Make
-        {
-            get { return _make; }
-            set { _make = Make; }
-        }
-        public string Model
-        {
-            get { return _model; }
-            set { _model = Model; }
-        }
-        public int Year
-        {
-            get { return _year; }
-            set { _year = Year; }
-        }
-        public float Weight
-        {
-            get { return _weight; }
-            set { _weight = Weight; }
-        }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public float Weight { get; set; }
 
         //constructors
 
         public Vehicle(string make, string model, int year, float weight)
         {
-            Make = _make;
+            Make = make;
             Model = model;
             Year = year;
             Weight = weight;
@@ -59,7 +38,7 @@ namespace ClassesLibrary
             return string.Format("Make: {0}\n" +
                 "Model: {1}\n" +
                 "Year: {2}\n" +
-                "Weight: {3}\n",
+                "Weight: {3:n0}\n",
                 Make, Model, Year, Weight);
         }
     }//end class
