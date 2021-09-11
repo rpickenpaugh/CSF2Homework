@@ -7,14 +7,14 @@ using System.Collections;
 
 namespace ClassesLibrary
 {
-    public class Artist : Song
+    public class Artist
     {
         //fields
 
         //properties
 
 
-        public ArrayList[Song] Tracks { get; set; }
+        public Song[] Tracks { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
 
@@ -23,7 +23,7 @@ namespace ClassesLibrary
         {
 
         }
-        public Artist(ArrayList[Song] tracks, string title, string genre, string artist, int lengthInSeconds) : base(artist, title, lengthInSeconds)
+        public Artist(Song[] tracks, string title, string genre, string artist, int lengthInSeconds)
         {
             Tracks = tracks;
             Title = title;
@@ -33,12 +33,18 @@ namespace ClassesLibrary
         //methods
         public override string ToString()
         {
+            string songs = "";
+            foreach (Song item in Tracks)
+            {
+                songs += item.Title + "\n";
+            }
+
             return string.Format(
-                "Song: {0}\n",
-                "Tracks: {1}\n",
-                "Title: {2}\n",
+                "Song: {0}\n" + 
+                "Tracks: {1}\n"+ 
+                "Title: {2}\n"+
                 "Genre: {3}\n",
-                , Tracks, Title, Genre);
+                songs, Tracks, Title, Genre);
         }
 
 
