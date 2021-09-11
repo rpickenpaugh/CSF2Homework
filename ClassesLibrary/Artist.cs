@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ClassesLibrary
 {
-    public class Artist
+    public class Artist : Song
     {
         //fields
 
         //properties
-        public Array Tracks { get; set; }
+
+
+        public ArrayList[Song] Tracks { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
 
@@ -20,11 +23,25 @@ namespace ClassesLibrary
         {
 
         }
-        public Artist(Array tracks ,string title, string genre)
+        public Artist(ArrayList[Song] tracks, string title, string genre, string artist, int lengthInSeconds) : base(artist, title, lengthInSeconds)
         {
+            Tracks = tracks;
+            Title = title;
+            Genre = genre;
+        }//end fqctor
 
-        }//TODO - Artist
         //methods
+        public override string ToString()
+        {
+            return string.Format(
+                "Song: {0}\n",
+                "Tracks: {1}\n",
+                "Title: {2}\n",
+                "Genre: {3}\n",
+                , Tracks, Title, Genre);
+        }
+
+
 
     }//end class
 }

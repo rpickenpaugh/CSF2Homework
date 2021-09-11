@@ -176,6 +176,11 @@ namespace TesterProgram
 
             #endregion
 
+            #region Artist
+
+            ArrayList 
+
+            #endregion
         }//end Main()
     }
 }
